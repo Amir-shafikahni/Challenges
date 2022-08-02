@@ -1,24 +1,26 @@
 function scramble (str1 , str2){
     // to creat an array using the strings
-    let splitedStr1 = str1.split("")
-    let splitedStr2 = str2.split("")
+    let string1 = str1.split("")
+    let string2 = str2.split("")
 
     // a flag to check if it follows the pattern or not
     let doesItFollowThePattern = true
 
-    splitedStr2.forEach(charOfStr2 => {        
+    string2.forEach(char => {        
 
-        // a flag to check if there is (charOfStr2) in splitedStr1 or not
+        // a flag to check if there is (char) in string1 or not
         let = isCharExists = false
 
-        // to check if there is (charOfStr2) in splitedStr1 or not
-        for(let i = 0 ; i < splitedStr1.length ; i++){
-            if(charOfStr2 === splitedStr1[i]){;
-                splitedStr1.splice(i , 1)
+        // to check if there is (char) in string1 or not
+        for(let i = 0 ; i < string1.length ; i++){
+            if(char === string1[i]){;
+                string1.splice(i , 1)
 
                 isCharExists = true
                 return
             }
+
+            
         }
 
         if(!isCharExists){
@@ -34,7 +36,6 @@ function scramble (str1 , str2){
         return false
     }
 }
-
 
 
 console.log(scramble("scriptjava" , "javascript"))
